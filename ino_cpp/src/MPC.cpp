@@ -8,10 +8,6 @@
 using namespace std;
 double u1l = 5;
 double u2l = 2;
-//const int swarm_size = 80;
-//const int Np = 20;
-//const int Nu = 20;
-//const int dim_bird =2*Nu;
 const double inertia = 0.7298; /// arbitrary factors
 const double correction_factor = 1.49618 ; 
 const double length=0.445; /// to be measured
