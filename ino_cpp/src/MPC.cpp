@@ -32,13 +32,9 @@ swarm::swarm()
     for(int i=0; i<swarm_size; i++){
         for (int j=0; j<Nu; j++){
             Bird[i].position[j] = Random(-u1l,u1l);
-           // Bird[i].velocity[j] = 0;
-            //Bird[i].cost = 1e10;
             Bird[i].best_local_position[j] = Bird[i].position[j];
             Bird[i].position[Nu + j] = Random(-u2l,u2l);
             Bird[i].best_local_position[j+Nu] = Bird[i].position[j+Nu];
-            //Bird[i].velocity[Nu + j] = 0;
-            //Bird[i].best_cost = 1e15;
 
         }        
     } 
@@ -127,9 +123,9 @@ for (int i = 0; i < swarm_size; i++){       //start of birds loop
 
      /// best personal position 
 
-        if (abs(cost) < my_swarm.Bird[i].best_cost)
+        if (cost < my_swarm.Bird[i].best_cost)
         {
-            my_swarm.Bird[i].best_cost=abs(cost);      //update best birds cost
+            my_swarm.Bird[i].best_cost=cost;      //update best birds cost
 
 
             for ( int j = 0; j < 2*Nu; j++)            //update best local position
@@ -190,8 +186,8 @@ for (int i = 0; i < swarm_size; i++) {
     Vl = vopt/r + L/2*wopt;
     Vr = vopt/r - L/2*wopt;
     double* Vopt= new double(2);
-    Vopt[0]= vopt;
-    Vopt[1]= wopt;
+    Vopt[0]= Vl; //vopt; // uncomment this in case you wanna communicate spatial velocity (Twist) with Gazebo 
+    Vopt[1]= Vr; //wopt;
 
     return Vopt;     
 
