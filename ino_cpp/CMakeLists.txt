@@ -115,7 +115,7 @@ catkin_package(
 ###########
 
 # Declare a C++ executable
-add_executable(main src/ino_cpp.cpp src/MPC.cpp src/ref.cpp)
+add_executable(main src/main.cpp src/MPC.cpp src/ref.cpp)
 
 target_include_directories(ino_cpp PUBLIC "${PROJECT_BINARY_DIR}")
 # Add cmake target dependencies of the executable
