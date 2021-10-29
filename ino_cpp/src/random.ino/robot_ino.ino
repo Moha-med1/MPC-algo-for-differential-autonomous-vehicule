@@ -147,20 +147,13 @@ while(i <= max_iter){
         //mpu.update();
        if ((newTime-oldTime) >= SampleTime){
             
-
-            //double w_gyro_new = mpu.getGyroX();
-            //double new_angleX = (sampleTimeGyro*w_gyro_new)/1000+old_angleX ;
-            //double mapped_angle = map(new_angleX,-100,100,-180,180);
-            //Serial.println("ANGLE X                  ");
-            //Serial.println(mapped_angle);
-            //double theta = (mapped_angle*M_PI)/180 ;
-            double theta =3.14;// angleX(sampleTimeGyro, old_angleX)/180*M_PI;
+            double theta =angleX(sampleTimeGyro, old_angleX)/180*M_PI;      
             double dleft = (currentTick1-prevticks1) * d;
             double dright = (currentTick2-prevticks1) * d;
             double deltaX = (1/2)*(dleft + dright)*cos(theta);
             double deltaY = (1/2)*(dleft + dright)*sin(theta);         
-            double x =0;// x + deltaX;
-            double y =0;// y + deltaY;
+            double x = x + deltaX;      //odometry of x
+            double y = y + deltaY;      // odometry of y
             pos.x= x;
             pos.y= y;
             pos.theta= theta;
@@ -226,10 +219,10 @@ void speed(int prevnbTicks1, int prevnbTicks2,double* diffpos1,double* diffpos2)
    
 }
 
-//float angleX(int sampleTimeGyro,float old_angleX){
- //  float w_gyro_new = mpu.getGyroX();
-   //float new_angleX = (sampleTimeGyro*w_gyro_new)/1000 + old_angleX ;
-   //float mapped_angle = map(new_angleX,-100,100,-180,180);
-   //old_angleX = new_angleX ;
-   //return mapped_angle ; 
- //}
+float angleX(int sampleTimeGyro,float old_angleX){
+   float w_gyro_new = mpu.getGyroX();
+   float new_angleX = (sampleTimeGyro*w_gyro_new)/1000 + old_angleX ;
+   float mapped_angle = map(new_angleX,-100,100,-180,180);
+   old_angleX = new_angleX ;
+   return mapped_angle ; 
+ }
