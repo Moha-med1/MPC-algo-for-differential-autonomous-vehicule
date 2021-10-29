@@ -100,11 +100,11 @@ nh.subscribe(sub);
 
 // setting gyro
 
-//Wire.begin();  
-//byte status = mpu.begin();
-//while(status!=0){ } // stop everything if could not connect to MPU6050
-//delay(1000);
-//mpu.calcOffsets(true,true); // gyro and accelero
+Wire.begin();  
+byte status = mpu.begin();
+while(status!=0){ } // stop everything if could not connect to MPU6050
+delay(1000);
+mpu.calcOffsets(true,true); // gyro and accelero
 
 // setting motors and encoders
 
