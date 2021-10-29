@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(ino_cpp)
+project(main)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -115,15 +115,15 @@ catkin_package(
 ###########
 
 # Declare a C++ executable
-add_executable(ino_cpp src/ino_cpp.cpp src/MPC.cpp src/ref.cpp)
+add_executable(main src/ino_cpp.cpp src/MPC.cpp src/ref.cpp)
 
 target_include_directories(ino_cpp PUBLIC "${PROJECT_BINARY_DIR}")
 # Add cmake target dependencies of the executable
 # same as for the library above
-add_dependencies(ino_cpp ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(main ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 # Specify libraries to link a library or executable target against
-target_link_libraries(ino_cpp
+target_link_libraries(main
   ${catkin_LIBRARIES}
 )
 
