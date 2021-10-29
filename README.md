@@ -6,4 +6,4 @@ The project consists of four main parts:
 - the fourth and last part is the arduino code. It a .ino file that acquires the state of the robot (position and orientation) from the sensors (encoders + gyroscope) and estimates the odometry of the robot. It also implement an inner loop PID controller that regulates the velocity of the motors, such that the desired velocity will be communicated from the MPC command (Raspberry node)  via ROS
 
 
-PS: the folder ino_cpp is a ros package that should be executed along with ros master and either arduino or Gazebo simulation 
+PS: the folder ino_cpp is a ros package. the executable "main" produced by this package should be executed along with ros master and either arduino or Gazebo simulation 
