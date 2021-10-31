@@ -11,10 +11,10 @@ int i =0;
 int max_iter = 1000; 
 unsigned int SampleTime =1;
 
-
+geometry_msgs::Pose2D vel;
 nav_msgs::Odometry odometry;
 geometry_msgs::Pose2D pos;
-geometry_msgs::Twist vel;
+//geometry_msgs::Twist vel;
 void callback(const geometry_msgs::Pose2D &xytheta) {
 	pos = xytheta;
 	ROS_INFO("I got a 2d pose!");
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
 	ros::init(argc, argv, "pi_node");
 	ros::NodeHandle n;
 
-	ros::Publisher pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 5);
+	ros::Publisher pub = n.advertise<geometry_msgs::Pose2D>("desired_velocity", 5);
 	
 	ros::Subscriber sub = n.subscribe("actual_position", 5, callback);
 
