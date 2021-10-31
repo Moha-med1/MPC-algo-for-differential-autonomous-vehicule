@@ -7,5 +7,6 @@ The project consists of four main parts:
 
 Here you find a demonstrative video running Gazebo simulation of a differential robot controlled by this command (MPC) such that the trajectory reference is a circle :
 https://drive.google.com/file/d/1G1k8OX83KltEySx1zqu4JQXIHo-Ti51P/view?usp=sharing
+(The Gazebo model used in the simulation below is : https://github.com/sanuann/DifferentialDriveRobot)
 
 PS: the folder ino_cpp is a ros package. the executable "main" produced by this package should be executed along with ros master and either arduino or Gazebo simulation 
