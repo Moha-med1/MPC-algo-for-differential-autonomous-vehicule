@@ -144,7 +144,7 @@ while(i <= max_iter){
   
 
         unsigned int newTime = millis();
-        //mpu.update();
+        mpu.update();
        if ((newTime-oldTime) >= SampleTime){
             
             double theta =angleX(sampleTimeGyro, old_angleX)/180*M_PI;      
