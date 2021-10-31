@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
 
 
 //generate reference
-double** Xref = cercleRef(max_iter, SampleTime, 0.002, 3, 0, 0, 0);
+double** Xref = cercleRef(max_iter, SampleTime, 0.002, 3, 1.5, 0, 0);
 //double** Xref = rightRef(max_iter, SampleTime, 0);
 swarm my_swarm;
 
