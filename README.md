@@ -10,4 +10,4 @@ https://drive.google.com/file/d/1G1k8OX83KltEySx1zqu4JQXIHo-Ti51P/view?usp=shari
 
 The Gazebo model used in the simulation above is : https://github.com/sanuann/DifferentialDriveRobot
 
-PS: the folder ino_cpp is a ros package. the executable "main" produced by this package should be executed along with ros master and either arduino or Gazebo simulation 
+PS: the folder ino_cpp is a ros package. the executable "main" produced by this package should be executed along with ros master and either arduino (in practice) or Gazebo simulation 
