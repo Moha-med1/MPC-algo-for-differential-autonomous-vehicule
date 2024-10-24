@@ -67,12 +67,11 @@ To run the project, ensure that you have ROS installed along with the necessary 
 Follow the instructions at https://wiki.ros.org/ROS/Installation to install the appropriate ROS distribution for your system.
 
 # 2. Clone the Repository:
-git clone https://github.com/your-repo/MPC-algo-for-differential-autonomous-vehicule
-cd MPC-algo-for-differential-autonomous-vehicule
+`git clone https://github.com/your-repo/MPC-algo-for-differential-autonomous-vehicule`
 
 # 3. Build the ROS Package:
-cd ino_cpp
-catkin_make
+`cd ino_cpp
+catkin_make`
 
 # 4. Upload Arduino Code:
 Open the Arduino IDE and upload the robot_controller.ino file to your Arduino board.
@@ -81,7 +80,7 @@ Open the Arduino IDE and upload the robot_controller.ino file to your Arduino bo
 roslaunch differential_drive_robot gazebo.launch
 
 # 6. Run the Main Node:
-rosrun ino_cpp main
+`rosrun ino_cpp main`
 
 ## Dependencies
 # ROS (Robot Operating System)
