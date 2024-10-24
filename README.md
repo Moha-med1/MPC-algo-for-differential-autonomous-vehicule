@@ -82,7 +82,7 @@ roslaunch differential_drive_robot gazebo.launch
 # 6. Run the Main Node:
 `rosrun ino_cpp main`
 
-## Dependencies
-# ROS (Robot Operating System)
-# Gazebo
-# Arduino IDE
+# Dependencies
+### ROS (Robot Operating System)
+### Gazebo
+### Arduino IDE
