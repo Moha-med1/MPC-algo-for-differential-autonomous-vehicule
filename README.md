@@ -84,7 +84,6 @@ roslaunch differential_drive_robot gazebo.launch
 rosrun ino_cpp main
 
 ## Dependencies
-ROS (Robot Operating System): For communication between nodes.
-Gazebo: For simulating the robot's behavior.
-Arduino IDE: To upload the code to the microcontroller.
-Particle Swarm Optimization (PSO) Library: Used for optimization within the MPC algorithm.
+# ROS (Robot Operating System)
+# Gazebo
+# Arduino IDE
