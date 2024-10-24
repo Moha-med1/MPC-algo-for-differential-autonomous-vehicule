@@ -70,8 +70,8 @@ Follow the instructions at https://wiki.ros.org/ROS/Installation to install the 
 `git clone https://github.com/your-repo/MPC-algo-for-differential-autonomous-vehicule`
 
 # 3. Build the ROS Package:
-`cd ino_cpp
-catkin_make`
+`cd ino_cpp`
+`catkin_make`
 
 # 4. Upload Arduino Code:
 Open the Arduino IDE and upload the robot_controller.ino file to your Arduino board.
